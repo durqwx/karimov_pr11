@@ -1,0 +1,263 @@
+@font-face {
+    font-family: "Nunito";
+    src: url('../fonts/static/NunitoSans_7pt-Regular.ttfe');
+    font-family: "Shango";
+    src: url('../fonts/Shango-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Nunito-light";
+    src: url('../fonts/static/NunitoSans_10pt-Light.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.to-up {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.px-100 {
+    padding-left: 310px;
+    padding-right: 310px;
+}
+
+.kartabutton:hover {
+    background-color: #CF9A4C;
+    color: #FFF;
+}
+
+
+/* Навигация */
+
+header {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; */
+    border-bottom: 1px solid white;
+}
+
+header .logo {
+    width: 168.288px;
+    height: 63px;
+    flex-shrink: 0;
+}
+
+header .shopping-bag {
+    width: 50px;
+    height: 50px;
+}
+
+header .user {
+    width: 61px;
+    height: 61px;
+    flex-shrink: 0;
+}
+
+.header__container {
+    padding-top: 26px;
+    padding-bottom: 27px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submenu__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 43px;
+}
+
+.submenu__wrapper a {
+    font-family: 'Nunito', Verdana, sans-serif;
+    color: #CF9A4C;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.2px;
+}
+
+header .start-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+hr {
+    height: 1px;
+}
+
+
+/* Стили к блоку "О нас" */
+.about-us {
+    height: 964px;
+}
+
+.background-photo {
+    height: 1080px;
+    width: 100%;
+    background-image: url('../img/fimg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+/* Общий блок */
+.about-us-info {
+    padding-top: 154px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 22px;
+
+}
+
+/* Блок с текстом */
+.about-us-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 857px;
+}
+
+.about-us-info img {
+    width: 420px;
+    height: 629px;
+}
+
+
+/* Отделение кнопки и линни */
+.button-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 66px;
+}
+
+/* Кнопка для перехода на каталог */
+.button-line .button-katalog {
+    border-radius: 100px;
+    border: 1px solid #CF9A4C;
+    color: #FFF;
+    background-color: transparent;
+    font-size: 20px;
+    font-family: 'Nunito-light', Verdana, sans-serif;
+    line-height: normal;
+    letter-spacing: 3.4px;
+    padding: 30px 62px;
+}
+
+.button-line .button-katalog:hover {
+    background-color:#CF9A4C;
+    color: #ffffff;
+    transition: .5s;
+}
+
+.button-line .button-katalog:not(hover) {
+    transition: .5s;
+}
+
+.button-line hr {
+    width: 547px;
+    height: 0.1px;
+    border: none;
+    border-top: 0.1px solid white;
+}
+
+.about-us-text h1 {
+    color: #ffffff;
+    font-family: 'Shango', Verdana, sans-serif;
+    font-size: 100px;
+    line-height: 105%;
+}
+
+.about-us-text p {
+    color: #7A7A7A;
+    text-align: right;
+    font-family: 'Nunito-light', Verdana, sans-serif;
+    font-size: 32px;
+}
+
+.menu {
+    display: flex;
+    gap: 3px;
+}
+
+.menu__elem {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.menu__btn {
+    background-color: transparent;
+    border: none;
+    padding: 10px 55px;
+    color: #e5e5e5;
+    font-size: 22px;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.menu__btn.active {
+    box-shadow: none;
+  
+}
+
+.submenu__elem{
+    padding: 10px 0px;
+    color: #A79785;
+    font-weight: 600;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 10px;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.submenu.active {
+    visibility: visible;
+    opacity: 1;
+    transition: .9s;
+}
+.submenu:not(:active){
+    transition: .9s;
+}
+
+.submenu__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px;
+    border: 1px solid #e5e5e5;
+    background-color: white;
+}
